@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // while문과 Math.random()을 이용해 두개의 주사위를 던진다고 할 때
+      // (첫번째 주사위 값, 두번째 주사위 값) == 합이 5일 경우 주사위 실행 중지
+
+      while (result != 5) {
+        var dice1 = Math.floor(Math.random() * 6) + 1;
+        var dice2 = Math.floor(Math.random() * 6) + 1;
+        document.write("(" + dice1 + ", " + dice2 + ")<br>");
+
+        var result = dice1 + dice2;
+        if (result == 5) {
+          document.write("합이 5가 되어 주사위를 종료합니다.");
+          break;
+        }
+      }
+    </script>
+  </body>
+</html>
+
+<!-- do {
+    var random1 = Math.floor(Math.random() * 6) + 1;
+    var random2 = Math.floor(Math.random() * 6) + 1;
+    // var result = random1 + random2;
+    document.write("(", random1, ",", random2, ")<br>");
+  } while (random1 + random2 != 5); -->

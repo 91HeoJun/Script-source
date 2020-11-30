@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 이메일을 입력받아서 중간에 @가 들어있는지 확인하기
+      // 들어있지 않다면 alert(이메일 다시입력) 다시 이메일 입력받기 -> function
+
+      function eFinder() {
+        let email = new String(prompt("이메일 입력"));
+
+        if (email.indexOf("@") == -1) {
+          alert("다시입력하세요");
+          eFinder();
+        } else {
+          document.write("입력한 이메일 : " + email);
+        }
+      }
+      eFinder();
+    </script>
+  </body>
+</html>

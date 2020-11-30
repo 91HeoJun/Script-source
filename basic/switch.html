@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let num1 = Number(prompt("국어점수 입력"));
+      let num2 = Number(prompt("영어점수 입력"));
+      let num3 = Number(prompt("수학점수 입력"));
+
+      let result = (num1 + num2 + num3) / 3;
+
+      switch (parseInt(result / 10)) {
+        case 9:
+          document.write("A등급");
+          break;
+        case 8:
+          document.write("B등급");
+          break;
+        case 7:
+          document.write("C등급");
+          break;
+        case 6:
+          document.write("D등급");
+          break;
+        default:
+          document.write("F등급 - 재시험 필요");
+
+          break;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 사용자에게 자주 사용하는 포털 검색사이트에 대한 정보를 받아 이동하기
+
+      let site = prompt(
+        "선호하는 포털 사이트 선택하기 : 1.구글  2.다음  3.네이버 중 번호 입력"
+      );
+
+      let url;
+
+      switch (site) {
+        case "1":
+          url = "http://www.google.com";
+          break;
+        case "2":
+          url = "http://daum.net";
+          break;
+        case "3":
+          url = "http://naver.com";
+          break;
+
+        default:
+          alert("보기를 재선택 하세요");
+          break;
+      }
+
+      if (url) location.href = url;
+    </script>
+  </body>
+</html>

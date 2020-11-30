@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 이번주 로또번호
+      // 로또번호 6개 추출하여 배열에 담은 후 출력
+      // 1~45 => [@, @, @, @]
+      // while / lenght가 6이면 stop
+
+      // 빈 배열 생성
+      var allIn = new Array(); /*let allIn =[];*/
+      while (true) {
+        //로또번호 추출
+        var lottoNum = Math.floor(Math.random() * 46) + 1;
+
+        //배열담기
+        allIn.push(lottoNum);
+
+        if (allIn.length > 5) {
+          break;
+        }
+      }
+      document.write(allIn + "<br>");
+      document.write("인생은 한방! 로또번호 입니다 ");
+    </script>
+  </body>
+</html>

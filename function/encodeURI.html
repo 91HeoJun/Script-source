@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // encode~~ : 문자를 유니코드 값으로 변경
+      // encodeURI : 영문, 숫자, 일부 기호는 제외
+      // encodeURIComponent : 영문, 숫자는 제외
+      document.write(
+        encodeURI("http://localhost:8080/basic/info.html?name=홍길동")
+      );
+      document.write("<br>");
+      document.write(
+        encodeURIComponent("http://localhost:8080/basic/info.html?name=홍길동")
+      );
+      document.write("<br>");
+      document.write(
+        decodeURI(
+          "http://localhost:8080/basic/info.html?name=%ED%99%8D%EA%B8%B8%EB%8F%99"
+        )
+      );
+
+      document.write("<br>");
+      document.write(
+        decodeURIComponent(
+          "http%3A%2F%2Flocalhost%3A8080%2Fbasic%2Finfo.html%3Fname%3D%ED%99%8D%EA%B8%B8%EB%8F%99"
+        )
+      );
+    </script>
+  </body>
+</html>

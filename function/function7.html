@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //콜백 함수 : 비동기로 수행되는 경우에 함수의 실행시기 결정
+      //            어떤 이벤트가 발생했거나 특정 시점에 도달했을때 시스템에서 호출
+      alert("시작");
+      setTimeout(() => {
+        // 비동기
+        alert("3초가 지났습니다");
+      }, 3000);
+      alert("마무리");
+    </script>
+  </body>
+</html>

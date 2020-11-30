@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 사용자에게 국어 영어 수학 점수를 입력받아 평균을 구한 뒤
+      // A90, B80, C70, D60, Else F 등급 출력하기
+
+      let num1 = Number(prompt("국어점수 입력"));
+      let num2 = Number(prompt("영어점수 입력"));
+      let num3 = Number(prompt("수학점수 입력"));
+
+      let result = (num1 + num2 + num3) / 3;
+
+      if (result >= 90) {
+        document.write("A등급");
+      } else if (result >= 80) {
+        document.write("B등급");
+      } else if (result >= 70) {
+        document.write("C등급");
+      } else if (result >= 60) {
+        document.write("D등급");
+      } else {
+        document.write("F등급 - 재시험 필요");
+      }
+    </script>
+  </body>
+</html>

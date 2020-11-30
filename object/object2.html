@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let tv = new Object();
+      tv.color = "red";
+      tv.power = true;
+      tv.vol = 13;
+      tv.info = function () {
+        document.write("색상 : ", this.color, "<br>");
+        document.write("전원 : ", this.power, "<br>");
+        document.write("소리 : ", this.vol, "<br>");
+      };
+      tv.info();
+    </script>
+  </body>
+</html>

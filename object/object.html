@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //사용자 정의 객체
+      let student = {
+        name: "홍길동",
+        kor: 92,
+        math: 98,
+        eng: 96,
+        sci: 98,
+      };
+
+      let output = "";
+      for (key in student) {
+        output += key + ":" + student[key] + "<br>";
+      }
+      document.write(output);
+
+      //   document.write(student.name + "<br>");
+      //   document.write(student.kor + "<br>");
+      //   document.write(student.math + "<br>");
+      //   document.write(student.eng + "<br>");
+      //   document.write(student.sci + "<br>");
+    </script>
+  </body>
+</html>

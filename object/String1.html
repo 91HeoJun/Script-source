@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 내장객체 - 3. String
+
+      // var str = "hello JavaScript";
+      var str = new String("hello JavaScript");
+
+      document.write("특정위치 문자 반환 : ", str.charAt(4), "<br>");
+      document.write("문자 찾기 : ", str.indexOf("j"), "<br>"); // 못찾는 경우 -1을 돌려줌
+      document.write("문자 찾기 : ", str.match("ja"), "<br>");
+      document.write("문자 찾기 : ", str.match("boy"), "<br>");
+      document.write("특정 문자 변경 : ", str.replace("hello", "hi"), "<br>");
+      document.write("특정 문자 찾기(위치) : ", str.search("ja"), "<br>");
+      document.write("문자 자르기 : ", str.slice(6, 10), "<br>");
+      document.write("문자 자르기 : ", str.substring(6, 10), "<br>");
+      document.write("문자 공백 제거 : ", "hello      ".trim(), "<br>");
+      document.write("대문자 변경 : ", str.toUpperCase(), "<br>");
+      document.write("소문자 변경 : ", "ABCDEFGHIJKL".toLowerCase(), "<br>");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   let arr = new Array();
+      //   arr.push(1);
+      //   arr.push(3);
+      //   arr.push(5);
+      //   arr.push(7);
+      //   arr.push(9);
+      //   arr.push(11);
+      let arr = new Array(1, 3, 5, 7, 9, 11);
+      for (let i in arr) {
+        document.write(arr[i] + "<br>");
+      }
+      document.write("<br><br>");
+      document.write("연결문자를 이용한 배열 요소 연결 : " + arr.join("-"));
+      document.write("<br><br>");
+      document.write("다른 배열과 연결 : " + arr.concat([2, 4, 6, 8, 10]));
+      document.write("<br><br>");
+      document.write("배열 요소 자르기 : " + arr.slice(1, 3));
+      document.write("<br><br>");
+      document.write("배열 요소 거꾸로 출력 : " + arr.reverse());
+      document.write("<br><br>");
+      document.write("배열 길이 : " + arr.length);
+      document.write("<br><br>");
+      // 정렬 기준을 부여해야 숫자는 정렬이 됨
+      document.write("정렬 : " + arr.sort());
+      document.write("<br><br>");
+      document.write("정렬 : " + ["사당", "한남", "강남", "옥수"].sort());
+    </script>
+  </body>
+</html>

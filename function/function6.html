@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 재귀 함수
+      const g = function f(num) {
+        if (num == 0) {
+          document.write(num + "<br>");
+        } else {
+          document.write(num + "<br>");
+          f(num - 1);
+        }
+      };
+
+      g(5);
+    </script>
+  </body>
+</html>

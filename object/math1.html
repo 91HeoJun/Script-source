@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //내장객체 - 2.Math
+      document.write("원주율 상수 : " + Math.PI + "<br>");
+      document.write("내림(소수점 첫째자리) : " + Math.floor(3.14159) + "<br>");
+      document.write("올림(소수점 첫째자리) : " + Math.ceil(3.14159) + "<br>");
+      document.write(
+        "반올림(소수점 첫째자리) : " + Math.round(3.14159) + "<br>"
+      );
+      document.write("<hr>");
+      document.write("절대값 : " + Math.abs(-3) + "<br>");
+      document.write("최대값 : " + Math.max(5, 6, 8, 12, 1) + "<br>");
+      document.write("최소값 : " + Math.min(5, 6, 8, 12, 1) + "<br>");
+      document.write("<hr>");
+      document.write("랜덤값(0~1) : " + Math.random() + "<br>");
+      document.write("제곱근값 : " + Math.sqrt(36) + "<br>");
+      document.write("<hr>");
+      // 0~9사이의 난수 구하기
+      document.write("랜덤값(0~9) : " + Math.random() * 10 + "<br>");
+      document.write("랜덤값(0~10) : " + Math.random() * 11 + "<br>");
+      document.write(
+        "랜덤값(0~10) : " + Math.floor(Math.random() * 11) + "<br>"
+      );
+      document.write(
+        "랜덤값(0~30) : " + Math.floor(Math.random() * 31) + "<br>"
+      );
+      document.write("<hr>");
+      // 120~150 사이의 난수 구하기
+      // 원하는 구간 : Math.floor(Math.random()*(최대값-최소값 + 1)) + 최소값;
+      document.write(
+        "랜덤값(120~150) : " + (Math.floor(Math.random() * 31) + 120) + "<br>"
+      );
+    </script>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //사용자에게 입력 받기(소문자)
+      let name = new String(prompt("영문 이름을 소문자로 입력하세요"));
+
+      //전화번호 입력받기
+      let phonNum = new String(prompt("전화번호를 입력(000-0000-0000)"));
+
+      //화면 출력 시 영어 소문자 -> 대문자로 바꿔서 출력
+      document.write("이름 : " + name.toUpperCase(), "<br>");
+      //            전화번호 -> 가운데 4자리 ####으로 바꿔서 출력
+      document.write(
+        "전화번호 : " + phonNum.replace(phonNum.slice(4, 8), "####"),
+        "<br>"
+      );
+    </script>
+  </body>
+</html>

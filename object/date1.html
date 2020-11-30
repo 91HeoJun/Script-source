@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 내장 객체 - 1.Date
+      // 참조변수명 : new 내장객체명();
+      var today = new Date();
+      document.write(today, "<br>");
+      document.write("연도 : ", today.getFullYear(), "<br>");
+      document.write("월 : ", today.getMonth() + 1, "<br>"); // 월 : 0 ~ 11월 개념.
+      document.write("일 : ", today.getDate(), "<br>");
+      document.write("시 : ", today.getHours(), "<br>");
+      document.write("분 : ", today.getMinutes(), "<br>");
+      document.write("초 : ", today.getSeconds(), "<br>");
+      document.write(
+        "날짜를 문자열 형태로 : ",
+        today.toLocaleDateString(),
+        "<br>"
+      );
+      document.write("<hr>");
+      //특정 날짜 지정
+      let date = new Date(2020, 11, 30);
+      document.write("연도 : ", date.getFullYear(), "<br>");
+      document.write("월 : ", date.getMonth() + 1, "<br>");
+      document.write("일 : ", date.getDate(), "<br>");
+    </script>
+  </body>
+</html>

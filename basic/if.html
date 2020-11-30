@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>스크립트 결과</h3>
+    <script>
+      // false : 0, null, ""(공백문자), undefined
+      // 현재 시간을 가져와서 오전, 오후인지 출력
+
+      let date = new Date();
+      let hour = date.getHours();
+
+      if (hour < 12) {
+        document.write("오전");
+      } else {
+        document.write("오후");
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 사용자에게 숫자를 입력받아 양수, 음수인지를 구분하기
+      let num = Number(prompt("당신이 좋아하는 숫자는 무엇입니까>??"));
+      document.write(typeof num);
+
+      //   if (num > 0) {
+      //     document.write("양수");
+      //   } else {
+      //     document.write("음수");
+      //   }
+      if (num % 2 == 0) {
+        document.write("짝수");
+      } else {
+        document.write("홀수");
+      }
+    </script>
+  </body>
+</html>
