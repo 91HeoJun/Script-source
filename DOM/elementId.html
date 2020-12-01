@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- DOM(Document Object Model) 
+         모든 태그는 객체라고 부르며, 태그에는 기능과 속성이 포함되어 있음-->
+
+    <h1 id="header1">Header1</h1>
+    <h2 id="header2">Header2</h2>
+    <script>
+      //h1 태그요소 가져오기 1. getElementById()
+      let header1 = document.getElementById("header1");
+      console.log(header1);
+      console.log(header1.innerText);
+      console.log(header1.innerHTML);
+
+      let header2 = document.getElementById("header2");
+      console.log(header2);
+      //header2 요소의 텍스트 노드 값을 변경
+      header2.innerText = "<i>with getElementById()</i>";
+      //   header2.innerHTML = "<i>with getElementById()</i>";
+    </script>
+  </body>
+</html>

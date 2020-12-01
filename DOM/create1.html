@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // <h1>Hello DOM</h1> 생성하기
+      // 1. <h1>태그 생성하기
+      let header = document.createElement("h1");
+      // 2. Hello DOM 문자열 생성하기
+      let content = document.createTextNode("Hello DOM");
+      // 3. 생성된 태그 요소와 문자열 결합하기
+      header.appendChild(content);
+      // 4. 지정된 영역에 삽입하기
+      document.body.appendChild(header);
+    </script>
+  </body>
+</html>

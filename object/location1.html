@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="">
+      <input type="button" value="이동하기" onclick="replace()" />
+    </form>
+    <script>
+      // location 객체 : 사용자 브라우저와 관련된 속성과 메소드를 제공
+      function replace() {
+        // ↓ 현재 주소를 지정된 주소로 변경(뒤로가기 안됨)
+        // location.replace("http://www.naver.com");
+        location.href = "http://www.naver.com";
+      }
+    </script>
+  </body>
+</html>

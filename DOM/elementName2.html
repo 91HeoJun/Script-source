@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul>
+      <li>List Item1</li>
+      <li>List Item2</li>
+      <li>List Item3</li>
+      <li>List Item4</li>
+      <li>List Item5</li>
+    </ul>
+    <ul>
+      <li>List Item1</li>
+      <li>List Item2</li>
+      <li>List Item3</li>
+      <li>List Item4</li>
+      <li>List Item5</li>
+    </ul>
+  </body>
+  <script>
+    //ul 태그요소 가져오기 - 2. getElementsByTagName();
+    let ul = document.getElementsByTagName("ul");
+    console.log(ul);
+    console.log("ul[0] : ", ul[0]);
+    console.log("ul[0].innerHTML : ", ul[0].innerHTML);
+    console.log("ul[0].innerText : ", ul[0].innerText);
+    console.log("ul[0].childNodes : ", ul[0].childNodes);
+    console.log("ul[0].children : ", ul[0].children);
+    console.log("ul[0].children[0] : ", ul[0].children[0]);
+    console.log("ul[0].children[0] : ", ul[0].firstElementChild);
+    console.log("ul[0].children[1].innerText : ", ul[0].children[1].innerText);
+    console.log("ul[0].nextSibling : ", ul[0].nextSibling);
+    console.log("ul[0].nextElementSibling : ", ul[0].nextElementSibling);
+  </script>
+</html>

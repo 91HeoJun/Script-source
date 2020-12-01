@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // <img src='space_food.jpg' alt='우주식량''> 생성하기
+      // 1. <img>태그 생성하기
+      let img = document.createElement("img");
+      // 2. 속성 생성하기
+      // img.src = "space_food.jpg";
+      // img.alt = "우주식량";
+      img.setAttribute("src", "space_food.jpg");
+      img.setAttribute("alt", "우주식량");
+      // 3. 지정된 영역에 삽입하기
+      document.body.appendChild(img);
+    </script>
+  </body>
+</html>
