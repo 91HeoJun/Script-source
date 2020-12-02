@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="" method="get">
+      <div>
+        <label for="username">이름</label>
+        <input type="text" name="username" id="username" />
+      </div>
+      <div>
+        <label for="password">비밀번호</label>
+        <input type="password" name="password" id="password" />
+      </div>
+      <div>
+        <label for="age">나이</label>
+        <input type="text" name="age" id="age" />
+      </div>
+      <div><input type="submit" value="전송" onclick="checkForm()" /></div>
+    </form>
+    <script>
+      function checkForm() {
+        // ↓ event(submit, a) 이벤트 막는 코드로서 자주 사용됨
+        event.preventDefault();
+        // 이름, 비번, 나이를 가져온 후 내용이 없는 경우 해당요소에 값을 입력할 수 있도록 포커스 지정
+        let name = document.getElementById("username");
+        let password = document.getElementById("password");
+        let age = document.getElementById("age");
+
+        if (name.value == "") {
+          alert("이름을 입력하세요!");
+          name.focus();
+          return false; // return false로 실패 시 돌아가는 것을 명확히 설정할 수 있음.
+        } else if (password.value == "") {
+          alert("비밀번호을 입력하세요!");
+          password.focus();
+          return false;
+        } else if (age.value == "") {
+          alert("나이를 입력하세요!");
+          age.focus();
+          return false;
+        }
+
+        // 폼 전송 => submit();
+        document.querySelector("form").submit();
+      }
+    </script>
+  </body>
+</html>

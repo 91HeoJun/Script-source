@@ -4,6 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      .callout {
+        border: solid 1px red;
+        margin: 2px 4px;
+        padding: 2px 6px;
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -12,7 +19,7 @@
     <div id="content">
       <p>This is a <i>Simple</i>HTML file.</p>
     </div>
-    <div id="callout">
+    <div class="callout">
       <p>This is as fancy as we'll get!</p>
     </div>
 
@@ -22,5 +29,20 @@
     <div id="callout2">
       <p>A single HTML element cna have multiple classes.</p>
     </div>
+    <script>
+      // 2개의 p태그를 생성
+      const p1 = document.createElement("p");
+      const p2 = document.createElement("p");
+
+      // 생성된 p 태그 안에 문자 삽입.
+      p1.innerText = "I was created dynamically";
+      p2.innerText = "I was also created dynamically!";
+
+      const content = document.getElementById("content");
+      let content_firstChild = content.firstElementChild;
+      //insertBefore(삽입할 요소, 삽입할 위치)
+      content.insertBefore(p1, content_firstChild);
+      content.appendChild(p2); // append = 대상의 뒤로 붙는 것
+    </script>
   </body>
 </html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="p1">This is a paragraph</p>
+    <input type="button" value="눌러보세요" onclick="changeSt()" />
+    <script>
+      function changeSt() {
+        let target = document.getElementById("p1");
+        target.style.fontFamily = "Century Schoolbook";
+        target.style.color = "red";
+        target.style.fontStyle = "italic";
+      }
+    </script>
+  </body>
+</html>

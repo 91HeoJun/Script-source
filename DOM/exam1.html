@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="ex">div로 선언된 영역</div>
+    <a href="#" onclick="get()">div 요소 내용 출력</a>
+    <a href="#" onclick="set()">div 요소 내용 변경</a>
+
+    <script>
+      let target = document.getElementById("ex");
+
+      function get() {
+        //alert("get()");
+        //ex 영역을 가져와서 해당 요소의 텍스트 노드내용 출력
+        alert(target.innerText);
+      }
+      function set() {
+        //alert("set()");
+        //ex 영역을 가져와서 해당 요소의 텍스트 노드내용 변경
+        //메시지는 "변경되었습니다" 로 변경
+        ex.innerText = "변경되었습니다.";
+      }
+    </script>
+  </body>
+</html>

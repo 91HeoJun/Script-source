@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 원본이미지 -->
+    <img src="space_food.jpg" alt="우주식량" />
+    <button type="button" onclick="changeImg()">클릭</button>
+
+    <script>
+      let picture = document.querySelector("img");
+      function changeImg() {
+        picture.src = "gogi.jpg";
+      }
+    </script>
+  </body>
+</html>

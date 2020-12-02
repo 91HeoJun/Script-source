@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: midnightblue;
+      }
+      .box {
+        border: 2px solid white;
+        color: mintcream;
+        position: relative;
+
+        position: absolute;
+        top: 25%;
+        left: 25%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <h1>The Light Bulb</h1>
+      <br />
+      <button type="button" onclick="turnOn()">Turn on the light</button>
+      <img src="pic_bulboff.gif" alt="전구" />
+      <button type="button" onclick="turnOff()">Turn off the light</button>
+    </div>
+
+    <script>
+      let Bulb = document.querySelector("img");
+      function turnOn() {
+        Bulb.src = "pic_bulbon.gif";
+      }
+      function turnOff() {
+        Bulb.src = "pic_bulboff.gif";
+      }
+    </script>
+  </body>
+</html>
