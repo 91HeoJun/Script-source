@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <label for="">이름</label>
+      <input type="text" name="word" onchange="lower()" />
+    </div>
+    <p>입력 필드를 벗어나면 소문자로 변경</p>
+    <script>
+      function lower() {
+        // text 요소의 값을 가져온 후 소문자로 변경하여 다시 보여주기
+
+        let element = document.querySelector("[name = 'word']");
+        element.value = element.value.toLowerCase();
+      }
+    </script>
+  </body>
+</html>

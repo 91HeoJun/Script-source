@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>클릭하면 사라집니다</h2>
+    <p class="para1">요것은 문단이고</p>
+    <p id="para2">요것은 두번째 문단이다</p>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      $(function () {
+        //DOM 요소 선택 시 CSS 선택자 모두 선택 가능
+        $("h2").click(function () {
+          //   $("h2").hide();
+          $(this).hide();
+        });
+      });
+
+      $(".para1").click(function () {
+        // $(".para1").css("color", "#669900");
+        $(this).css("color", "#669900");
+      });
+
+      $("#para2").click(function () {
+        $(this).hide();
+      });
+    </script>
+  </body>
+</html>

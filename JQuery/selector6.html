@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="wrap">
+      <h1>인접관계 선택자</h1>
+      <p>내용1</p>
+      <p class="txt">내용2</p>
+      <p>내용3</p>
+      <p>내용4</p>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      $(function () {
+        // 내용1 p 태그의 배경색 #0ff, 테두리 2px solid, #f00
+        // $("#wrap p:nth-child(2)")
+        //   .css("background-color", "#ff0")
+        //   .css("border", "2px solid #f00");
+        $("#wrap .txt")
+          .prev()
+          .css("background-color", "#ff0")
+          .css("border", "2px solid #f00");
+
+        // // 내용 3, 4 p 태그의 배경색 #ff0, 테두리 2px dashed #f00
+        // $("#wrap p:nth-child(4)")
+        //   .css("background-color", "#ff0")
+        //   .css("border", "2px dashed #f00");
+        // $("#wrap p:nth-child(5)")
+        //   .css("background-color", "#ff0")
+        //   .css("border", "2px dashed #f00");
+        $("#wrap .txt")
+          .nextAll()
+          .css("background-color", "#ff0")
+          .css("border", "2px dashed #f00");
+      });
+    </script>
+  </body>
+</html>

@@ -18,7 +18,7 @@
     <div>
       <label for="">숫자</label>
       <input type="text" name="num1" size="5" />
-      <input type="button" value="확인" />
+      <input type="button" value="확인" onclick="guess()" />
     </div>
     <div>
       <label for="">추측횟수</label>
@@ -28,5 +28,36 @@
       <label for="">힌트</label>
       <input type="text" name="hint" readonly />
     </div>
+    <script>
+      let nGuess = 0; // 추측횟수
+      const linzi = Math.floor(Math.random() * 100) + 1; //1~100 사이 난수
+
+      function guess() {
+        // 사용자가 입력한 값 가져오기
+        let num1 = parseInt(document.querySelector("[name = 'num1']").value);
+        nGuess++;
+        let result = "";
+
+        // 사용자의 입력값이 정확히 일치하면 "정답입니다."
+        if (linzi == num1) {
+          result = "정답입니다";
+          // 버튼 비활성화
+          document.querySelector("[type = 'button']").disabled = "true";
+
+          // 사용자의 입력값이 작으면 "추측값이 작습니다"
+        } else if (linzi < num1) {
+          result = "추측값이 큽니다";
+
+          // 사용자의 입력값이 크면 "추측값이 큽니다"
+        } else {
+          result = "추측값이 작습니다";
+        }
+
+        //추측 횟수 input에 보여주기
+        document.querySelector("[name = 'count']").value = nGuess;
+        //결과 input에 보여주기
+        document.querySelector("[name = 'hint']").value = result;
+      }
+    </script>
   </body>
 </html>

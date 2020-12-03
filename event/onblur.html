@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <input type="text" onblur="test()" />
+      <!--onblur : 포커스에 값이 없어도 반응-->
+    </div>
+    <div>
+      <input type="text" onchange="test()" />
+      <!--onchange : 포커스에 값이 없을 경우 반응하지 않음 -->
+    </div>
+    <script>
+      function test() {
+        alert("test");
+      }
+    </script>
+  </body>
+</html>

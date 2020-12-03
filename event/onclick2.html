@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="demo" onclick="good()">Click Me</p>
+    <p onclick="this.innerText='good jobbbb'">Click Me2</p>
+    <!-- this : 이벤트가 일어난 해당 요소 -->
+
+    <script>
+      function good() {
+        //Click Me 로 되어있는 p 요소를 클릭하면 good job 이라는 내용으로 변경하기
+        document.getElementById("demo").innerText = "Good Job";
+      }
+    </script>
+  </body>
+</html>
