@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #wrap div {
+        margin: 10px;
+      }
+      input {
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <div>
+        <input type="text" />
+      </div>
+      <div><a href="http://naver.com">네이버</a></div>
+      <div>
+        <input type="text" name="username" />
+      </div>
+      <div>
+        <input type="password" name="userpw" id="" />
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      $(function () {
+        // 첫번째 input에 Hello JQuery를 보여주고 싶을 때
+        // $("[type='text']").val("Hello JQuery");
+        // $("input:text").val("Hello JQuery");
+        $(":text").val("Hello JQuery");
+        $("a[href^='http']").css("background-color", "yellow");
+        $("[name='username']").css("background-color", "red");
+        // $("[name='userpw']").css("background-color", "blue");
+        // $("[type='password']").css("background-color", "blue");
+        // $("input:password").css("background-color", "blue");
+        $(":password").css("background-color", "blue");
+      });
+    </script>
+  </body>
+</html>

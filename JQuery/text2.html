@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul>
+      <li>List Item1</li>
+      <li>List Item2</li>
+      <li>List Item3</li>
+      <li>List Item4</li>
+      <li>List Item5</li>
+    </ul>
+    <button>클릭</button>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      $(function () {
+        // button 클릭 시 li요소 가져와서 li요소의 텍스트값 출력
+        $("button").click(function () {
+          let ul = $("ul > li");
+          //자바 스크립트
+          // for (let i = 0; i < ul.length; i++) {
+          //   console.log(ul[i].innerText);
+          // }
+
+          //JQuery
+          // for (let i = 0; i < ul.length; i++) {
+          //   console.log($(ul[i]).text());
+          // }
+
+          // $.each(배열명, function(){})
+          $.each(ul, function () {
+            console.log($(this).text());
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

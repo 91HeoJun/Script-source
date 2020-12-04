@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .out {
+        font-size: 35px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2 class="para1">이것은 헤드 태그입니다</h2>
+    <p class="para1">이것은 문단입니다</p>
+    <p>이것은 두번째 문단입니다</p>
+    <button>클릭</button>
+    <p class="out">마우스를 여기로 움직여주세요</p>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      $(function () {
+        // $("button").click(function () {
+        //   $("*").hide();
+        // });
+        // $(".out").mouseover(function () {
+        //   alert("마우스를 움직였습니다.");
+        // });
+
+        $("button").on("click", function () {
+          $("*").hide();
+        });
+        $(".out").on("mouseover", function () {
+          alert("마우스를 움직였습니다.");
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 class="title">탐색 선택자</h1>
+    <ul id="menu">
+      <li>내용1</li>
+      <li>내용2</li>
+      <li>내용3</li>
+      <li>내용4</li>
+    </ul>
+    <ul id="menu2">
+      <li>내용 2-1</li>
+    </ul>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      $(function () {
+        // 맨 처음 li 선택하기
+        // $("#menu li:first").css("border", "1px solid red");
+        // 맨 나중 li 선택하기
+        // $("#menu li:last").css("border", "1px dashed red");
+        // 홀수 li 선택하기
+        // $("#menu li:odd").css("border", "1px solid green");
+        // index 번호와 동일한 요소 선택
+        // $("#menu li:eq(2)").css("border", "1px solid green");
+        // index 번호보다 작은 요소들
+        // $("#menu li:lt(2)").css("border", "1px solid green");
+        // index 번호보다 큰 요소들
+        // $("#menu li:gt(2)").css("border", "1px solid green");
+
+        $("li:only-child").css("border", "1px solid red");
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <label for="">이름</label>
+      <input type="text" name="" id="" />
+    </div>
+    <div>
+      <label for="">이메일</label>
+      <input type="email" name="" id="" />
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      $(function () {
+        //focus를 가지게 되면 배경색 변경
+        $("input").focus(function () {
+          $(this).css("background-color", "#ccc");
+        });
+        //focus를 벗어나면 원래의 배경색 돌리기
+        $("input").blur(function () {
+          $(this).css("background-color", "#fff");
+        });
+      });
+    </script>
+  </body>
+</html>
