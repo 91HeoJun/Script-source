@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="">
+      <div>
+        <input type="text" name="num1" size="5" />
+        <select name="op" id="op">
+          <option value="+">+</option>
+          <option value="-">-</option>
+          <option value="*">*</option>
+          <option value="/">/</option>
+        </select>
+        <input type="text" name="num2" size="5" />
+        <button type="button">계산하기</button>
+      </div>
+      <div id="result"></div>
+    </form>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      //num1, op, num2 가져온 후 계산하여 결과값 result에 보여주기
+
+      $(function () {
+        $("button").click(function () {
+          let n1 = Number($("[name='num1']").val());
+          let op = $("#op").val();
+          let n2 = Number($("[name='num2']").val());
+          let result = 0;
+
+          switch (op) {
+            case "+":
+              result = n1 + n2;
+              break;
+            case "-":
+              result = n1 - n2;
+              break;
+            case "*":
+              result = n1 * n2;
+              break;
+            case "/":
+              result = n1 / n2;
+              break;
+          }
+          $("#result").html("결과 값 :" + result);
+        });
+      });
+    </script>
+  </body>
+</html>

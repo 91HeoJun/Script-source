@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="">
+      <div>
+        <input type="checkbox" name="fruit" value="사과" id="c1" />사과
+        <input
+          type="checkbox"
+          name="fruit"
+          value="바나나"
+          id="c2"
+          checked
+        />바나나 <input type="checkbox" name="fruit" value="포도" id="c3" />포도
+        <input type="checkbox" name="fruit" value="딸기" id="c4" />딸기
+      </div>
+      <select name="opt" id="opt">
+        <option value="사과">사과</option>
+        <option value="복숭아">복숭아</option>
+        <option value="메론" selected>메론</option>
+      </select>
+    </form>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      //radio 선택값 result 영역에 보여주기
+
+      $(function () {
+        //prop() : 선택한 폼 요소의 상태 속성값을 가져오거나 설정할 때 사용
+        console.log($("#c1").prop("checked"));
+        console.log($("#c2").prop("checked"));
+
+        // 상태 속성값 설정
+        $("#c1").prop("checked", true);
+
+        //c2가 checked 값이 ture일 경우 false로 변경
+        if ($("#c1").prop("checked") == true) {
+          $("#c2").prop("checked", false);
+        }
+        //select option selected 인 값의 인덱스 가져오기
+        console.log($("#opt").prop("selectedIndex"));
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="">
+      <div>
+        <input type="checkbox" name="fruit" value="사과" />사과
+        <input type="checkbox" name="fruit" value="바나나" />바나나
+        <input type="checkbox" name="fruit" value="포도" />포도
+        <input type="checkbox" name="fruit" value="딸기" />딸기
+      </div>
+      <button type="button">보내기</button>
+      <div id="result"></div>
+    </form>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      //radio 선택값 result 영역에 보여주기
+
+      $(function () {
+        $("button").click(function () {
+          //체크박스 버튼에서 체크된 값 가져오기
+          let result = "";
+          $(":checked").each(function () {
+            result += $(this).val() + " ";
+          });
+
+          $("#result").html("선택한 과일 : " + result);
+        });
+      });
+    </script>
+  </body>
+</html>

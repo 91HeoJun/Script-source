@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="p1">이것은 문단입니다.</p>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      $(function () {
+        // Java Script 방식
+        // document.querySelector("p").style.fontSize='35px'
+        $("#p1").css("color", "red");
+        $("#p1").css("fontfamily", "Century Schoolbook");
+        $("#p1").css("fontStyle", "italic");
+        $("#p1").css("fontSize", "40px");
+      });
+    </script>
+  </body>
+</html>

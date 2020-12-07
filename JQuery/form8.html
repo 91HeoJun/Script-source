@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="">
+      <div>
+        <label for="">이름</label>
+        <input type="text" name="username" id="username" />
+      </div>
+      <div>
+        <label for="">전화번호</label>
+        <input type="text" name="usertel" id="usertel" />
+      </div>
+      <div>
+        <label for="">비밀번호</label>
+        <input type="password" name="userpw" id="userpw" />
+      </div>
+      <div>
+        <button type="button" id="read">내용 읽기</button>
+        <button type="button" id="modify">내용 수정</button>
+        <button type="button" id="delete">내용 삭제</button>
+      </div>
+    </form>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      $(function () {
+        // 내용읽기 버튼 클릭 시 form의 action 속성을 변경한 후 submit()하기
+        $("#read").click(function () {
+          $("form").attr("action", "form7.html");
+          // 폼 안의 특정요소 제거하기
+          $("#userpw").remove();
+          $("form").submit();
+        });
+        $("#modify").click(function () {
+          $("form").attr("action", "form6.html");
+          $("form").submit();
+        });
+        $("#delete").click(function () {
+          // 폼 안의 요소 모두 제거
+          $("form").empty();
+          // 폼 안의 새로운 요소 추가
+          $("form").append("<input type='hiden' name='page' value='3'>");
+          $("form").attr("action", "form6.html");
+          $("form").submit();
+        });
+      });
+    </script>
+  </body>
+</html>

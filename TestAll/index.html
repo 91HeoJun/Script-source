@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      header {
+        padding: 10px;
+        margin-bottom: 30px;
+      }
+
+      li {
+        list-style-type: none;
+      }
+
+      nav {
+        height: 50px;
+        background-color: black;
+        line-height: 50px;
+      }
+
+      nav ul li {
+        float: left;
+        margin-left: 30px;
+        color: white;
+      }
+
+      .clearfix::after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+
+      main {
+        display: flex;
+      }
+
+      main article {
+        width: 33.3%;
+        padding: 70px;
+      }
+
+      section {
+        line-height: 30px;
+        margin-left: 20px;
+      }
+
+      footer {
+        position: static;
+        background-color: lightgray;
+        padding-right: 8px;
+        height: 60px;
+        line-height: 60px;
+        font-weight: bold;
+        text-align: center;
+      }
+
+      footer ul li {
+        display: inline-block;
+      }
+
+      a {
+        text-decoration: none;
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a href="http://www.11st.co.kr" target="_blank"
+        ><img src="logo.png" alt=""
+      /></a>
+    </header>
+    <nav class="clearfix">
+      <ul>
+        <li>컴퓨터</li>
+        <li>의류</li>
+        <li>가구/인테리어</li>
+        <li>스포츠/레저</li>
+        <li>식품</li>
+      </ul>
+    </nav>
+    <main>
+      <article>
+        <h3>HP</h3>
+        <section>
+          <img src="hp.jpg" alt="" width="280" height="230" />
+          <ul>
+            <li>Intel Core 8세대 i5 쿼드코어 장착</li>
+            <li>외장 그래픽 성능을 뛰어넘는 Intel UHD</li>
+            <li>DDR4 8G</li>
+            <li>SSD 256G</li>
+            <li>가격 : 1,200,000원</li>
+            <li><input type="button" value="쇼핑카트에 추가하기" /></li>
+          </ul>
+        </section>
+      </article>
+      <article>
+        <h3>삼성 노트북 펜</h3>
+        <section>
+          <img src="samsung.jpg" alt="" width="375" height="220" />
+          <ul>
+            <li>8세대 Intel® 코어 i3 쿼드코어 장착</li>
+            <li>8GB DDR4 Memory</li>
+            <li>멀티 태스킹에 탁월한 FHD 고해상도</li>
+            <li>FHD RealView LED Display</li>
+            <li>가격 : 1,199,000원</li>
+            <li><input type="button" value="쇼핑카트에 추가하기" /></li>
+          </ul>
+        </section>
+      </article>
+      <article>
+        <h3>LG그램</h3>
+        <section>
+          <img src="note.png" alt="" width="375" height="220" />
+          <ul>
+            <li>8세대 Intel®코어 i5-8250U</li>
+            <li>백라이트 키보드 풀 사이즈 79키</li>
+            <li>인텔 UHD Graphics 620</li>
+            <li>IPS LED 디스플레이</li>
+            <li>가격 : 1,439,000원</li>
+            <li><input type="button" value="쇼핑카트에 추가하기" /></li>
+          </ul>
+        </section>
+      </article>
+    </main>
+    <footer>
+      <ul>
+        <li>| 회사소개</li>
+        <li>| 이용약관</li>
+        <li>| 전자금융거래약관</li>
+        <li>| 개인정보처리방침</li>
+        <li>
+          |
+          <a href="javascript:void(0);" onclick="move()">입점문의</a> |
+        </li>
+      </ul>
+    </footer>
+  </body>
+  <script>
+    function move() {
+      window.open("question.html", "", "width=350, height=220");
+    }
+  </script>
+</html>
