@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const input =
+        "Regex pros know hte difference between <i>greedy</i> and <i>lazy</i> matching.";
+      let reg = /<i>.*?<\/i>/;
+      console.log(input.match(reg));
+      console.log(input.replace(reg, "<strong>$1</strong>"));
+    </script>
+  </body>
+</html>

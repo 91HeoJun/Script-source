@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <label for="">아이디</label>
+      <input type="text" name="userid" id="userid" onchange="checkId()" />
+    </div>
+    <div>
+      <label for="">비밀번호</label>
+      <input type="password" name="password id="password" >
+    </div>
+    <div>
+      <button type="button">확인</button>
+    </div>
+    <script>
+      function checkId() {
+        var userid = document.getElementById("userid").value;
+        var reg = /(?=.*[A-Za-z])(?=.*[\d])(?=.*[!@#$%])[A-Za-z\d!@#$%]{8,16}/;
+        if (!reg.test(userid)) {
+          alert("아이디를 확인해 주세요");
+          document.getElementById("userid").focus();
+          return false;
+        }
+      }
+    </script>
+  </body>
+</html>

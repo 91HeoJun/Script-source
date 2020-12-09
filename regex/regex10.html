@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let reg = /(\w+)\s(\w+)/;
+      let str = "John Smith";
+      console.log(" --------- match --------- ");
+      console.log(str.match(reg));
+      console.log();
+
+      let newstr = str.replace(reg, "$2, $1");
+      console.log(newstr);
+    </script>
+  </body>
+</html>

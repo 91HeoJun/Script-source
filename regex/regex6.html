@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #result {
+        color: red;
+        margin: 0;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="email" name="email" />
+    <input type="button" value="보내기" />
+    <p id="result"></p>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      $(function () {
+        let result = $("#result");
+        let email = $("[name='email']");
+
+        //포커스를 주면 하단에 나왔던 검증 메시지 없애기
+        $(email).focus(function () {
+          result.css("display", "none");
+          email.select();
+        });
+
+        $("[type='button']").click(function () {
+          // 정규식 패턴 생성
+          let reg = /\w+@[A-Za-z]+\.(com|ent|org|edu)$/;
+
+          // console.log(reg.test(tel));
+          //사용자가 입력한 값 가져오기
+          if (!reg.test(email.val())) {
+            //패턴과 일치하지 않는다면 "전화번호를 확인해주세요(red)"
+            result.css("display", "block");
+            result.html("이메일을 확인해주세요");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
