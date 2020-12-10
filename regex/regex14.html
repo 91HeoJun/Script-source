@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="">
+      <div>
+        <label for="name">이름</label>
+        <input type="text" name="name" id="name" />
+      </div>
+      <div>
+        <label for="age">나이</label>
+        <input type="text" name="age" id="age" />
+      </div>
+      <div>
+        <input type="submit" value="전송" onclick="validate()" />
+      </div>
+    </form>
+    <script>
+      // 버튼을 누르면 폼의 내용을 가져와서 확인하기
+      // 사용자의 이름이 비어있지 않고, 2-4자리로 입력되었는지 확인
+      // 사용자의 나이가 비어있지 않고, 0-120자리로 입력되었는지 확인
+
+      function validate() {
+        // 태그가 가지고 있는 기능 중지(submit, a)
+        event.preventDefault();
+
+        // 이름 가져오기
+        let name = document.getElementById("name").value;
+        //나이 가져오기
+        let age = document.getElementById("age").value;
+
+        //재확인 필요 ↓
+        if (name.lenght < 2 || name.lenght > 4) {
+          alert("이름을 확인하세요");
+          name.focus();
+          name.select();
+          return false;
+        }
+        if (
+          isNaN(parseInt(age.value)) ||
+          parseInt(age.value) < 0 ||
+          parseInt(age.value) > 120
+        ) {
+          alert("나이를 확인해주세요");
+          age.focus();
+          return false;
+        }
+        document.querySelector("form").submit();
+      }
+    </script>
+  </body>
+</html>
