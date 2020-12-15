@@ -80,7 +80,7 @@ $(function () {
         let mobile = $("#mobile").val();
 
         if (!regMobile.test(mobile)) {
-            alert("핸드폰 번호를이 다릅니다");
+            alert("핸드폰 번호가 다릅니다");
             $("#mobile").select();
             return false;
         }

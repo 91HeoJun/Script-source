@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Insert title here</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <style>
+      #newsletter_topics {
+        display: none;
+      }
+
+      .help-block {
+        display: block;
+        margin-top: 5px;
+        margin-bottom: 10px;
+        color: red;
+        font-size: 0.8em;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container" style="margin-top: 50px">
+      <form class="cmxform" id="signupForm" method="get" action="">
+        <fieldset>
+          <legend>유효성 검증 폼</legend>
+          <div class="form-group row">
+            <label for="username" class="col-sm-2 col-form-label"
+              >Username</label
+            >
+            <div class="col-sm-10">
+              <input
+                id="username"
+                name="username"
+                type="text"
+                class="form-control"
+              />
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="password" class="col-sm-2 col-form-label"
+              >Password</label
+            >
+            <div class="col-sm-10">
+              <input
+                id="password"
+                name="password"
+                type="password"
+                class="form-control"
+              />
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="confirm_password" class="col-sm-2 col-form-label"
+              >Confirm password</label
+            >
+            <div class="col-sm-10">
+              <input
+                id="confirm_password"
+                name="confirm_password"
+                type="password"
+                class="form-control"
+              />
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="email" class="col-sm-2 col-form-label">Email</label>
+            <div class="col-sm-10">
+              <input
+                id="email"
+                name="email"
+                type="email"
+                class="form-control"
+              />
+            </div>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              value=""
+              id="policy"
+              name="policy"
+            />
+            <label class="form-check-label" for="policy"
+              >사이트 방침 동의
+            </label>
+          </div>
+          <div class="form-check">
+            <input
+              type="checkbox"
+              class="form-check-input"
+              id="newsletter"
+              name="newsletter"
+            />
+            <label for="newsletter" class="form-check-label"
+              >newsletter 받기</label
+            >
+          </div>
+          <div style="line-height: 160%">&nbsp;</div>
+          <fieldset id="newsletter_topics">
+            <legend style="font-size: 1.3rem">
+              Topics (최소 2개는 고르세요)
+            </legend>
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                id="topic_marketflash"
+                value="marketflash"
+                name="topic"
+              />
+              <label class="form-check-label" for="topic_marketflash"
+                >Marketflash</label
+              >
+            </div>
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                id="topic_fuzz"
+                value="fuzz"
+                name="topic"
+              />
+              <label class="form-check-label" for="topic_fuzz"
+                >Latest fuzz</label
+              >
+            </div>
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                id="topic_digester"
+                value="digester"
+                name="topic"
+              />
+              <label class="form-check-label" for="topic_digester"
+                >Mailing list digester</label
+              >
+            </div>
+          </fieldset>
+          <div>
+            <input class="btn btn-primary mb-2" type="submit" value="Submit" />
+          </div>
+        </fieldset>
+      </form>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.min.js"></script>
+    <!-- 사용자 작성 유효성 검증 -->
+    <script src="signup.js"></script>
+  </body>
+</html>
